@@ -17,15 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-Et-wc6" userLabel="background">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z5H-Et-wc6" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-mA-OOx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Jq4-Dj-0H3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-mA-OOx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jq4-Dj-0H3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -36,7 +34,7 @@
                                     <constraint firstAttribute="width" secondItem="OEB-oh-MDY" secondAttribute="height" multiplier="750:666" id="J6z-vQ-Tm0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tlp-eI-WT3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tlp-eI-WT3">
                                 <rect key="frame" x="20" y="373" width="335" height="48"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -52,13 +50,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YS1-tn-zlb" firstAttribute="top" secondItem="tlp-eI-WT3" secondAttribute="bottom" constant="20" id="7os-GZ-A0N"/>
+                            <constraint firstAttribute="trailing" secondItem="Z5H-Et-wc6" secondAttribute="trailing" id="Baj-z5-ASY"/>
+                            <constraint firstItem="Z5H-Et-wc6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cu6-XA-oJY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tlp-eI-WT3" secondAttribute="trailing" constant="20" id="E97-Wd-6jW"/>
+                            <constraint firstAttribute="bottom" secondItem="Z5H-Et-wc6" secondAttribute="bottom" id="RwW-bV-59v"/>
+                            <constraint firstItem="Cdp-mA-OOx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tqe-3D-mfc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YS1-tn-zlb" secondAttribute="bottom" constant="20" id="V5V-RI-H9t"/>
+                            <constraint firstAttribute="trailing" secondItem="Cdp-mA-OOx" secondAttribute="trailing" id="W2x-3r-A7e"/>
                             <constraint firstItem="OEB-oh-MDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDJ-vf-xDf"/>
                             <constraint firstItem="tlp-eI-WT3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="edm-ld-5hr"/>
                             <constraint firstItem="tlp-eI-WT3" firstAttribute="top" secondItem="OEB-oh-MDY" secondAttribute="bottom" constant="20" id="h3D-Ln-Qwx"/>
                             <constraint firstItem="OEB-oh-MDY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nit-4Z-wT7"/>
+                            <constraint firstItem="Cdp-mA-OOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tSZ-e5-413"/>
+                            <constraint firstItem="Z5H-Et-wc6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="waw-vm-IPh"/>
                             <constraint firstItem="OEB-oh-MDY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="whH-J2-AUi"/>
+                            <constraint firstAttribute="bottom" secondItem="Cdp-mA-OOx" secondAttribute="bottom" id="xJM-bk-grh"/>
                             <constraint firstItem="YS1-tn-zlb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ytT-QQ-8UM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

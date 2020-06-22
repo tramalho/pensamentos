@@ -20,4 +20,8 @@ struct Quote: Codable {
     var authorFormatted: String {
         return "- \(author) -"
     }
+    
+    static func empty() -> Quote {
+      return Quote(quote: "", author: "", image: "")
+    }
 }

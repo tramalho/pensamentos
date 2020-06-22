@@ -22,4 +22,16 @@ class QuotesManager {
             print(error)
         }
     }
+    
+    func getRandomQuote() -> Quote {
+        
+        var result = Quote.empty()
+        
+        if quotes.count > 0 {
+            let index = Int(arc4random_uniform(UInt32(quotes.count)))
+            result = quotes[index]
+        }
+        
+        return result
+    }
 }
