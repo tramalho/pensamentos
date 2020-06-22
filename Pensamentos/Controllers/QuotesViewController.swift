@@ -14,8 +14,10 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var personPhoto: UIImageView!
     @IBOutlet weak var labelQuote: UILabel!
     @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var constraintQuotesTop: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        QuotesManager()
     }
 }

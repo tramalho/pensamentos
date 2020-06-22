@@ -66,6 +66,7 @@
                     <tabBarItem key="tabBarItem" title="Pensamentos" image="quotes" id="98B-R3-LsD"/>
                     <connections>
                         <outlet property="backgroundPhoto" destination="Z5H-Et-wc6" id="fkP-Zx-cMK"/>
+                        <outlet property="constraintQuotesTop" destination="h3D-Ln-Qwx" id="sZR-bK-FkU"/>
                         <outlet property="labelAuthor" destination="YS1-tn-zlb" id="L93-9x-PX3"/>
                         <outlet property="labelQuote" destination="tlp-eI-WT3" id="ceG-vg-UNS"/>
                         <outlet property="personPhoto" destination="OEB-oh-MDY" id="EYs-MM-pb1"/>
@@ -152,7 +153,7 @@
                                     <action selector="changeColorScheme:" destination="Q6m-Lc-kQr" eventType="valueChanged" id="nCn-0b-RH6"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="para mudar de pensamento basta clicar em qualquer lugar na tela &quot;Pensamentos&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-Z6-6QN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="para mudar de pensamento basta clicar em qualquer lugar na tela &quot;Pensamentos&quot;" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTz-Z6-6QN">
                                 <rect key="frame" x="20" y="542" width="335" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
