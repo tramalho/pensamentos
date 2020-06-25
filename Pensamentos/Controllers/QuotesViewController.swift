@@ -20,6 +20,12 @@ class QuotesViewController: UIViewController {
     private var timer: Timer?
     private let config = Settings.shared
     
+    override func viewDidLoad() {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("Refresh"), object: nil, queue: nil) {
+            (Notification) in self.formatView()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         formatView()
         super.viewWillAppear(true)
