@@ -18,9 +18,10 @@ class QuotesViewController: UIViewController {
     
     private let quoteManager = QuotesManager()
     private var timer: Timer?
+    private let config = Settings.shared
     
     override func viewWillAppear(_ animated: Bool) {
-        prepareQuote()
+        formatView()
         super.viewWillAppear(true)
     }
     
@@ -28,10 +29,24 @@ class QuotesViewController: UIViewController {
         prepareQuote()
     }
     
+    private func formatView() {
+        let isDayColor = config.colorScheme == 0
+        let backgroundNightColor = UIColor(red: 156.0/255, green: 68.0/255, blue: 15.0/255, alpha: 1.0)
+        let authorColor = UIColor(red: 192.0/255, green: 96.0/255, blue: 49.0/255, alpha: 1.0)
+        
+        view.backgroundColor  = isDayColor ? .white : backgroundNightColor
+        labelQuote.textColor  = isDayColor ? .black : .white
+        labelAuthor.textColor = isDayColor ? authorColor : .yellow
+        
+        prepareQuote()
+    }
+    
     private func prepareQuote() {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (Timer) in
-            self.showQuotes()
+        if config.autoRefresh {
+            timer = Timer.scheduledTimer(withTimeInterval: config.timeInverval, repeats: true) { (Timer) in
+                self.showQuotes()
+            }
         }
         showQuotes()
     }
